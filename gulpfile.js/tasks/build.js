@@ -1,8 +1,8 @@
 const gulp = require('gulp');
-const sequence = require('gulp-sequence');
+const sequence = require('run-sequence');
 
-const buildTask = function(cb) {
-	sequence('markdown', 'html', 'include', 'css', 'js', 'images', cb);
+const buildTask = function(callback) {
+	sequence('html', 'include', 'css', 'js', 'images', callback);
 }
 
 gulp.task('build', buildTask);

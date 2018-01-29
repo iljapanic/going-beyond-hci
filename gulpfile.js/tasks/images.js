@@ -6,7 +6,7 @@ const imagemin = require('gulp-imagemin');
 
 
 const imagesTask = function () {
-	gulp.src([config.images.src])
+	return gulp.src([config.images.src])
 		.pipe(imagemin())
 		.on('error', handleErrors)
 		.pipe(gulp.dest(config.images.dest))

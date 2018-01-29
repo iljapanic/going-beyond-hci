@@ -9,7 +9,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 
 const jsTask = function() {
-	gulp.src(config.js.src)
+	return gulp.src(config.js.src)
 		.pipe(plumber())
 		.pipe(concat(config.js.bundle))
 		.on('error', handleErrors)

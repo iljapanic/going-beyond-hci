@@ -1,9 +1,8 @@
 const gulp = require('gulp');
-const sequence = require('gulp-sequence');
+const sequence = require('run-sequence');
 
-const defaultTask = function(cb) {
-	sequence('markdown', 'html', 'include', 'css', 'js', 'images', 'watch', cb);
+const defaultTask = function(callback) {
+	sequence('html', 'include', 'css', 'js', 'images', 'watch', callback);
 }
 
 gulp.task('default', defaultTask);
-module.exports = defaultTask;

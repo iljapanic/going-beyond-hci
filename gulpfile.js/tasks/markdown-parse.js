@@ -5,17 +5,10 @@ const handleErrors = require('../lib/handleErrors');
 const marked = require('gulp-marked');
 const markdown = require('gulp-markdown-it');
 const plumber = require('gulp-plumber');
-
-// markdown-it plugis
-// const implicitFigures = require('markdown-it-implicit-figures');
-
-// markdown.use(implicitFigures, {
-// 	figcaption: true
-// });
-
+const sequence = require('run-sequence');
 
 const markdownParseTask = function() {
-	gulp.src(config.markdown.parse.src)
+	return gulp.src(config.markdown.parse.src)
 		.pipe(plumber())
 		.pipe(marked({}))
 		.on('error', handleErrors)
@@ -24,4 +17,3 @@ const markdownParseTask = function() {
 }
 
 gulp.task('markdown-parse', markdownParseTask);
-module.exports = markdownParseTask;
