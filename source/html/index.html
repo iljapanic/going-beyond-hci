@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Display meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Document meta -->
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
+
+	<!-- OpenGraph -->
+	<meta property="og:url" content="{{ permalink }}">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:image" content="./assets/img/cover.png">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="article:author" content="{% for author in authors %}{% if loop.length == 1 %}{{ author.name }}{% elseif loop.last %}{{ author.name }}{% else %}{{ author.name }},{% endif %}{% endfor %}">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="{{ authors[0].twitter }}">
+	<meta name="twitter:url" content="{{ permalink }}">
+	<meta name="twitter:title" content="{{ title }}">
+	<meta name="twitter:description" content="{{ description }}">
+	<meta name="twitter:image" content="./assets/img/cover.png">
+
+	<!-- Assets -->
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png">
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', '{{ ga }}');
+	</script>
+
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		{% include "./partials/header.html" %}
+
+		<main class="main" itemscope itemtype="http://schema.org/Article">
+
+			<div class="main__sidebar">
+				<div class="js-toc"></div>
+			</div>
+
+			<div class="main__main">
+
+				<article class="article js-toc-content">
+
+					<div id="main-text" class="article__text" itemprop="articleBody">
+						{% include "./_temp/paper-text.html" %}
+					</div>
+
+					<footer class="article__footer">
+						{% include "./_temp/paper-footer.html" %}
+					</footer>
+
+				</article>
+
+			</div>
+
+		</main>
+
+		{% include "./partials/footer.html" %}
+
+	</div>
+
+	<script type="text/javascript" src="./assets/js/bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+.toc {
+	overflow-y: auto;
+}
+
+.toc>ul {
+	overflow: hidden;
+	position: relative;
+}
+
+.toc>ul li {
+	list-style: none;
+}
+
+.toc-list {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a.toc-link {
+	color: currentColor;
+	height: 100%;
+	font-size: 0.6rem;
+	font-family: $sans;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $gray-dark;
+	font-weight: 200;
+}
+
+.is-collapsible {
+	max-height: 1000px;
+	overflow: hidden;
+	transition: all 300ms ease-in-out;
+}
+
+.is-collapsed {
+	max-height: 0;
+}
+
+.is-position-fixed {
+	position: fixed !important;
+	top: 0;
+}
+
+a.is-active-link {
+	font-weight: bold;
+	color: $text-color;
+}
+
+
+.js-toc
+	display none
+
++large()
+	.js-toc
+		display block
+
+@supports (position:sticky)
+	+large()
+		.js-toc
+			position sticky
+			top 35%
+
+.js-toc li
+	line-height 1
+	margin-bottom $spacing*0.5
+
+.js-toc ul ul
+	padding-left $leading*0.5
+	margin-top $leading*0.25

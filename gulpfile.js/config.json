@@ -1,0 +1,63 @@
+{
+
+	"publicDir": "./public/",
+
+	"markdown": {
+		"concatText": {
+			"src": "./source/markdown/text/*.md",
+			"dest": "./source/markdown/_temp/",
+			"filename": "paper-text.md"
+		},
+		"concatFooter": {
+			"src": "./source/markdown/footer/*.md",
+			"dest": "./source/markdown/_temp/",
+			"filename": "paper-footer.md"
+		},
+		"parse": {
+			"src": "./source/markdown/_temp/*.md",
+			"dest": "./source/html/_temp/"
+		},
+		"watch": "./source/markdown/**/*.md",
+		"watchIgnore": "!source/markdown/_temp/*.md"
+	},
+
+	"html": {
+		"src": "./source/html/index.html",
+		"templates": "./source/html",
+		"dest": "./public/",
+		"meta": "./source/data/meta.json",
+		"watch": "./source/html/**/*.html",
+		"watchIgnore": "!source/html/_temp/*.html"
+	},
+
+	"data" : {
+		"watch": "./source/data/*.json"
+	},
+
+	"css": {
+		"src": "./source/stylus/style.styl",
+		"dest": "./public/assets/css/",
+		"watch": "./source/stylus/**/**/*.styl"
+	},
+
+	"js": {
+		"entry": "./source/javascript/main.js",
+		"src": "./source/javascript/*.js",
+		"bundle": "bundle.js",
+		"bundleMin": "bundle.min.js",
+		"watch": "./source/javascript/**/*.js",
+		"dest": "./public/assets/js/"
+	},
+
+	"include": {
+		"src": "./source/include/**/**/**/**",
+		"dest": "./public/",
+		"watch": "./source/include/**/**/**/**"
+	},
+
+	"images": {
+		"src": "./source/images/**/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}",
+		"dest": "./public/images/",
+		"watch": "./source/images/**/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}"
+	}
+}

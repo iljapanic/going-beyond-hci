@@ -1,2 +1,1 @@
-# going-beyond-hci
-Going Beyond HCI
+# Going Beyond HCI: Information design for knowledge-sharing platforms and information-seeking behavior support in the context of travel

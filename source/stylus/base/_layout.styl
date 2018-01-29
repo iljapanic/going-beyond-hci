@@ -1,0 +1,36 @@
+.container
+	max-width $wrap
+	margin-left auto
+	margin-right auto
+	padding 0 $spacing*0.5
+	+large()
+		padding 0 $spacing
+		max-width $wrap-small
+	+xlarge()
+		max-width $wrap
+
+.header
+	padding $spacing*0.5 0 $spacing 0
+	+large()
+		padding $spacing*2 0
+
+.main
+	padding-bottom $spacing*2
+	overflow-wrap break-word
+	word-wrap break-word
+
+	+large()
+		display flex
+
+		.main__main
+			width $main
+
+		.main__sidebar
+			width ($wrap - $main)
+
+
+.footer
+	border-top $separator
+	padding $spacing*1.5 0 $spacing 0
+	+large()
+		padding $spacing*1.5 0

@@ -1,0 +1,31 @@
+{
+
+	"title" : "Going Beyond HCI",
+	"titleFull": "Going Beyond HCI: Information design for knowledge-sharing platforms and information-seeking behavior support in the context of travel",
+
+	"year": "2015",
+	"published": "Aug. 13, 2015",
+	"updated": "Jan. 16, 2018",
+
+	"keywords": "Human-Information Interaction, Information Design, Personal Information Management, Information Seeking Behavior, Information Needs",
+
+	"description": "A paper critiquing existing approaches to smart city design.",
+
+	"permalink": "https://iljapanic.com/academic/going-beyond-hci/",
+
+	"authors": [
+		{
+			"name": "Ilja Panic",
+			"nameAPA": "Panic, I.",
+			"organization": "Copenhagen Business School",
+			"email": "ilja@iljapanic.com",
+			"twitter": "@iljapanic",
+			"web": "https://iljapanic.com"
+		}
+	],
+
+	"abstract": "This paper positions itself in an up-and-coming fields of human-information interaction and information design, set in a broader field of information management. By applying the latest approaches to design of human-centered information systems and Design Science Research Methodology, this paper examines problem-based information needs within a specific information space in a context of travel industry. The underlying goal of this paper is to move away from human-computer interaction, which has traditionally been concerned with the study of personal information management and information needs, and to improve understanding of theoretical background for designing human-centered communication and information systems. More specifically it looks at many-to-many online knowledge-sharing platforms, with a particular focus on information-seeking behavior within those platforms. On a more practical note, the results of the analysis are used to provide a set of guiding principles for designing such platforms in a specific context of travel and location-based information-seeking.",
+
+	"ga": "UA-43693985-11"
+
+}

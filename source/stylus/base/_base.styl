@@ -1,0 +1,164 @@
+// inspired by https://github.com/devinhunt/typebase.css
+
+*
+	box-sizing border-box
+	margin 0
+	padding 0
+
+html
+	font-family $serif
+	font-size ($base-font-size / 16 * 70%)
+	-webkit-font-smoothing antialiased
+	text-size-adjust auto
+
+	+medium()
+		font-size ($base-font-size / 16 * 95%)
+
+	// +large()
+	// 	font-size ($base-font-size / 16 * 100%)
+
+	+xlarge()
+		font-size ($base-font-size / 16 * 100%)
+
+// headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin-top $leading
+	margin-bottom 0
+	line-height $leading
+
+h1
+	font-size $h1-size-mobile
+	line-height $h1-line-height-mobile
+	margin-top (1 * $leading)
+	margin-bottom (0.5 * $leading)
+	+large()
+		font-size $h1-size
+		line-height $h1-line-height
+
+h2
+	font-size $h2-size
+	line-height $h2-line-height
+	margin-top (2 * $leading)
+
+h3
+	font-size $h3-size
+	line-height $h3-line-height
+
+h4
+	font-size $h4-size
+	line-height $h4-line-height
+	margin-top (1 * $leading)
+	margin-bottom (0.25 * $leading)
+
+/* Copy & Lists */
+p
+	line-height $leading
+	margin-top $leading
+	margin-bottom 0
+
+h1 + p,
+h2 + p,
+h3 + p
+	margin-top 0.5 * $leading
+
+h4 + p
+	margin-top 0
+
+@supports (hyphens:auto)
+	p
+		hyphens auto
+		text-align justify
+
+ul,
+ol
+	margin-top $leading*0.5
+	margin-bottom $leading*0.5
+	padding-left $leading
+	li
+		margin-bottom $leading*0.25
+		&:last-of-type
+			margin-bottom 0
+
+li
+	line-height $leading
+
+
+
+blockquote
+	line-height $leading
+	margin-top $leading
+	margin-bottom $leading
+	padding 0 $leading*0.75
+	p
+		font-style italic
+	div
+		font-size 0.9rem
+
+hr
+	border-top $separator
+	margin $spacing 0
+
+img
+	max-width 100%
+
+figure
+	// background rgba(pink, 0.25)
+	margin $leading*1.5 $leading*0.5
+	text-align center
+	figcaption
+		margin-top $leading*0.5
+		font-size 0.85rem
+		line-height 1.65
+		font-style italic
+
+/* Tables */
+
+table
+	margin-top $leading
+	border-spacing  0px
+	border-collapse collapse
+
+td,
+th
+	padding 0
+	line-height $base-line-height * $base-font-size - 0px
+
+/* Code blocks */
+
+code
+	vertical-align bottom
+
+/* Leading paragraph text */
+
+.lead
+	font-size $scale * 1rem
+
+/* Hug the block above you */
+
+.hug
+	margin-top 0
+
+a:link,
+a:visited
+	color: inherit
+
+a:link
+	text-decoration: underline
+	text-decoration-skip: ink
+	color: inherit
+	transition: all 0.15s $quad-easing
+
+a:hover
+	color: $site-color
+
+::selection
+	background: $selection
+
+
+
